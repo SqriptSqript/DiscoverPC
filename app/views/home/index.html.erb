@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1 class="animated fadeInUp">DiscoverPC</h1>
+            <h3 style="color:white;">I'll guide you on the path to discovering the perfect computer.</h3>
+            <br>
+            <a href="#first" class="btn btn-dark btn-lg animated pulse">Let's go!</a>
+        </div>
+
+    </header>
+    <!-- Header for questions -->
+    <%= simple_form_for :Computer , :url => shoot_subs_path, :method => 'GET' do |f|%>
+    <section id="first" class="services bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 style="font-size:3em" class="animated swing"><b>First</b>. What will this computer be used for?</h1>
+                    <p class="lead">Movie editing, blogging, programming, what?</p>
+                          <br/>
+                          <%= f.input :used_for, label: ' '  , :input_html => { class: 'quest' }, :collection => ["Programming", "Gaming" , "Media Editing" , "Blogging", "Study" , "Casual Usage"] %>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <div class="row">
+                            <a href="#second"><i class="fa fa-arrow-down fa-3x" style="color:#1ec0ff;" aria-hidden="true"></i></a>
+                          </div>
+                </div>
+                <br/>
+                <br/>
+                <!-- ./col-lg-12 text-center -->
+              </div>
+              <!-- ./row -->
+        </div>
+        <!-- /.container -->
+    <!-- Question: Used at-->
+    </section>
+    <section id="second" style="background-color:#47b8e0;" class="services bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 style="font-size:2em"><b>Second</b>. Where will this computer most often be used at?</h1>
+                    <p class="lead" >Home, work , the movies or the local coffee shop</p>
+                          <br/>
+                          <br/>
+                          <%= f.input :used_at, label: ' ', :input_html => { class: 'quest' }, :collection => ['Work', 'Home' , 'School', 'Travel'] %>
+                          <br/>
+                          <div class="row">
+                            <br/>
+                            <br/>
+                            <a href="#third"><i class="fa fa-arrow-down fa-3x" style="color:#1ec0ff;" aria-hidden="true"></i></a>
+                          </div>
+                </div>
+                <!-- ./col-lg-12 text-center -->
+              </div>
+              <!-- ./row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- Question: Budget -->
+    <section id="third" style="background-color:#005f6b;" class="services bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 style="font-size:3em"><b>Third. </b>Enter your budget.</h1>
+                    <p class="lead" >Max: $2000.</p>
+                                    <%= f.input :cash, label: ' ', :input_html => { class: 'quest' } , as: :integer , placeholder: '$'%>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                              <button type="submit" name="nil" class="btn btn-lg btn-dark">Discover!</button>
+                              <% end %>
+                          <br/>
+
+                          </div>
+                </div>
+                <!-- ./col-lg-12 text-center -->
+              </div>
+              <!-- ./row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- Callout -->
+    <aside class="callout">
+        <div class="text-vertical-center">
+            <h1>Advertisements</h1>
+
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container" align="center">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+
+                    <br/>
+                    <br>
+                    <div class="text-vertical-center">
+                      <h4><strong>Meet the creators:</strong>
+                      </h4>
+                                              <b> Sqript Team</b><br/>
+                      <a href="https://github.com/SqriptTeam"><i class="fa fa-github fa-3x animated rubberBand" aria-hidden="true" style="color:#274c5e;"></i></a>
+
+                      <a href="https://twitter.com/SqriptTeam"><i class="fa fa-twitter fa-fw fa-3x animated rubberBand" style="color:#274c5e;"></i></a>
+
+                            </div>
+
+
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Sqript Team 2016</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+<script src="https://use.fontawesome.com/07c4fb2a9f.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+    // Disable Google Maps scrolling
+    // See http://stackoverflow.com/a/25904582/1607849
+    // Disable scroll zooming and bind back the click event
+    var onMapMouseleaveHandler = function(event) {
+        var that = $(this);
+        that.on('click', onMapClickHandler);
+        that.off('mouseleave', onMapMouseleaveHandler);
+        that.find('iframe').css("pointer-events", "none");
+    }
+    var onMapClickHandler = function(event) {
+            var that = $(this);
+            // Disable the click handler until the user leaves the map area
+            that.off('click', onMapClickHandler);
+            // Enable scrolling zoom
+            that.find('iframe').css("pointer-events", "auto");
+            // Handle the mouse leave event
+            that.on('mouseleave', onMapMouseleaveHandler);
+        }
+        // Enable map zooming with mouse scroll when the user clicks the map
+    $('.map').on('click', onMapClickHandler);
+    </script>
+</body>
+
+</html>

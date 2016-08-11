@@ -1,0 +1,60 @@
+// Place all the styles related to the delete controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  background-color:white;
+}
+.section {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 80px
+}
+
+h1 {
+	  font-weight: normal;
+	  font-size: 50px;
+	  text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+}
+
+.bold, .bold span {
+	  font-weight: bold;
+}
+
+span.colored {
+	  color: #F35064;
+	  text-shadow: 0 2px 2px rgba(253,210,215, .1);
+}
+
+span.moving-letter {
+	  display: inline-block;
+	  position: relative;
+	  -webkit-transition: all 700ms ease;
+	  -moz-transition: all 700ms ease;
+	  -o-transition: all 700ms ease;
+	  transition: all 700ms ease;
+	  cursor: default;
+}
+
+.info {
+	  line-height: 28px;
+}
+
+a.take-a-look {
+  margin-top: 20px;
+  font-weight: bold;
+  display: inline-block;
+  border: 1px solid #F35064;
+  padding: 6px 18px;
+  text-decoration: none;
+  color: #F35064;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+a.take-a-look:hover {
+  background-color: #F35064;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
+}
