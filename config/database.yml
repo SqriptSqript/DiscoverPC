@@ -19,7 +19,7 @@ default: &default
 
 development:
   <<: *default
-  database: computers
+  database: heroku_c23d36108664692
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -30,6 +30,6 @@ test:
 
 production:
   <<: *default
-  database: ENV['DATABASE_URL']
+  database: heroku_c23d36108664692
   username: ENV['DATABASE_USERNAME']
   password: ENV['DATABASE_PASSWORDs']
