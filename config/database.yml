@@ -15,7 +15,7 @@ default: &default
   pool: 5
   username: b5c1f4b06f5137
   password: 55f86db8
-  host: mysql2://b5c1f4b06f5137:55f86db8@us-cdbr-iron-east-04.cleardb.net/
+  host: mysql://b5c1f4b06f5137:55f86db8@us-cdbr-iron-east-04.cleardb.net/
 
 development:
   <<: *default
