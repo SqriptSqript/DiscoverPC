@@ -4,9 +4,6 @@ Rails.application.routes.draw do
   get 'delete/vome'
   get 'home/index'
   root 'home#index'
-
-
-
 #Root is always written in controller#method
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
