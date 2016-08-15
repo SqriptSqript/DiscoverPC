@@ -260,7 +260,7 @@
  }
  #fillOne{
     position:absolute;
-    width:30%;
+    width:50%;
     transition:1s;
     height:10%;
 
@@ -268,9 +268,23 @@
   }
 #fillOne:hover{
   position:absolute;
-  width:50%;
+  width:60%;
   transition:1s;
   height:12%;
+
+
+}
+
+#arrowDown2{
+  position:absolute;
+  top:230%;
+
+
+}
+
+#arrowDown1{
+  position:absolute;
+  top:230%;
 
 
 }
