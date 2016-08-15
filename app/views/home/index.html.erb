@@ -16,7 +16,7 @@
     </header>
     <!-- Header for questions -->
     <%= simple_form_for :Computer , :url => shoot_subs_path, :method => 'GET' do |f|%>
-    <section id="first" class="services bg-primary">
+    <section id="first" class="services bg-primary" style="background-color:#BDBDBD;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -41,12 +41,12 @@
         <!-- /.container -->
     <!-- Question: Used at-->
     </section>
-    <section id="second" style="background-color:#47b8e0;" class="services bg-primary">
+    <section id="second" style="background-color:#D32F2F;" class="services bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1 style="font-size:2em"><b>Second</b>. Where will this computer most often be used at?</h1>
-                    <p class="lead" >Home, work , the movies or the local coffee shop</p>
+                    <h1 style="font-size:3em"><b>Second</b>. Where will you mostly be using the computer ?</h1>
+                    <p class="lead" >Home, work , on campus or the local coffee shop</p>
                           <br/>
                           <br/>
                           <%= f.input :used_at, label: ' ', :input_html => { class: 'quest' }, :collection => ['Work', 'Home' , 'School', 'Travel'] %>
@@ -64,7 +64,7 @@
         <!-- /.container -->
     </section>
     <!-- Question: Budget -->
-    <section id="third" style="background-color:#005f6b;" class="services bg-primary">
+    <section id="third" style="background-color:#B71C1C;" class="services bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
