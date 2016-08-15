@@ -258,7 +258,19 @@
  img{
    width:100%;
  }
- #first{
+ #fillOne{
+    position:absolute;
+    width:30%;
+    transition:1s;
+    height:10%;
 
 
- }
+  }
+#fillOne:hover{
+  position:absolute;
+  width:50%;
+  transition:1s;
+  height:12%;
+
+
+}
