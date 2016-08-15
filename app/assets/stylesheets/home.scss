@@ -275,25 +275,34 @@
 
 }
 
+#fillTwo{
+  position:absolute;
+  width:50%;
+  transition:1s;
+  height:10%;
+
+
+}
+#fillTwo:hover{
+  position:absolute;
+  width:60%;
+  transition:1s;
+  height:12%;
+
+
+}
+
 #arrowDown2{
   position:absolute;
-  top:200%;
+  top:210%;
 
 
 }
 
 #arrowDown1{
   position:absolute;
-  top:125%;
+  top:135%;
 
 
 }
 
-.form-group{
-  height:15%;
-  width:50%;
-  position: absolute;
-  font-size:70px;
-
-
-}
