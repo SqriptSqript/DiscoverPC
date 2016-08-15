@@ -300,7 +300,7 @@
 }
 
 #arrowDown1{
-  position:relative;
+  position:absolute;
   top:90%;
 
 
@@ -308,7 +308,8 @@
 
 input{
   width:50%;
-  height:25%;
+  height:20%;
   font-size:50px;
+  position:absolute;
 
 }
