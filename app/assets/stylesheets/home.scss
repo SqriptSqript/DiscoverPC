@@ -285,8 +285,21 @@ top:60px;
 #chess:hover{
 
   width:33%;
-  height:10%;
+  height:15%;
   background-color: #B71C1C;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+#chess{
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+
 
 }
 
