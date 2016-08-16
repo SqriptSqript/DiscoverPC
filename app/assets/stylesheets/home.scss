@@ -306,10 +306,7 @@
 
 }
 
-.quest{
-  background-color:white;
 
-}
 
 
 .select-hidden {
@@ -384,3 +381,64 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#STEP2{
+  display:none;
+  position:absolute;
+  left:150%;
+  top:28%;
+
+
+}
+
+
+
+
+#STEP3{
+  display:none;
+  position:absolute;
+  left:150%;
+  top:28%;
+
+
+}
+
+#STEP1{
+  display:none;
+  position:absolute;
+  left:60%;
+  top:4%;
+
+}
+
+#dasTest2:hover #STEP2{
+  display:block;
+  transition:1s;
+
+  left:120%;
+  top:10%;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+
+}
