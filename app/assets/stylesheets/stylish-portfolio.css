@@ -259,3 +259,28 @@ img{
 
 
 }
+
+.form-control{
+    background-color: white;
+    font-size: 50px;
+    height:20%;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+
+}
+
+.form-control:hover{
+    background-color: grey;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+
+
+
+}
