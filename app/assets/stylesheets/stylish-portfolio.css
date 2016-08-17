@@ -263,7 +263,7 @@ img{
 .form-control{
     background-color: white;
     font-size: 20px;
-    height:10%;
+    height:13%;
     transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
@@ -283,5 +283,15 @@ img{
     transition: 1s;
 color:white;
 
+
+}
+
+#fillTwo{
+    height: 10px;
+
+}
+
+#fillOne{
+    height: 10px;
 
 }
