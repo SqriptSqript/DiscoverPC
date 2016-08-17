@@ -60,7 +60,7 @@
                             <a href="#third"><i class="fa fa-arrow-down fa-3x" style="color:white" aria-hidden="true"></i></a>
                              </div>
 
-                          <%= f.input :used_at, label: ' ', :input_html => { class: 'quest' }, :collection => [ 'Work', 'Home' , 'School', 'Travel'] %>
+                          <%= f.input :used_at, label: ' ', :input_html => { class: 'quest' }, :collection => [ 'Work', 'Home' , 'School', 'Travel'], placeholder:'Type a location'  %>
 
                           </div>
 
@@ -79,7 +79,7 @@
                 <div class="col-lg-12 text-center">
                     <h1 style="font-size:3em"><b>Third. </b>Enter your budget.</h1>
                     <p class="lead" >Max: $2000.</p><div id="mack">
-                                    <%= f.input :cash, label: ' ', :input_html => { class: 'quest' } , as: :integer , placeholder: '$'%></div>
+                                    <%= f.input :cash, label: ' ', :input_html => { class: 'quest' } , as: :integer , placeholder: 'Type the price in Dollars'%></div>
                                     <br/>
                                     <br/>
                                     <br/>
