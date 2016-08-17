@@ -24,14 +24,14 @@
   height:55%;
   overflow-y: scroll;
   overflow-x:hidden;
-  width:80%;
+  width:60%;
   left:6%;
   cursor:pointer;}
 
 
 
 th {
-  background-color:#4F86C6;
+
 
   color: #fff;
   font-weight: bold;
@@ -41,7 +41,7 @@ th {
 }
 
 th:after {
-  background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
+
   content: '';
   display: block;
   height: 25%;
@@ -85,7 +85,7 @@ tr {
 }
 
 tr:nth-child(odd) td {
-  background: #f1f1f1 url(http://jackrugile.com/images/misc/noise-diagonal.png);
+
 }
 
 tr:last-of-type td {
