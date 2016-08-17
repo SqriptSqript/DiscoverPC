@@ -262,7 +262,7 @@ img{
 
 .form-control{
     background-color: white;
-    font-size: 25px;
+    font-size: 20px;
     height:10%;
     transition: 1s;
     -webkit-transition: 1s;
@@ -270,6 +270,7 @@ img{
     -ms-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
+    top:15px;
 
 }
 
