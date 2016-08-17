@@ -271,8 +271,10 @@ img{
     -o-transition: 1s;
     transition: 1s;
     top:8px;
+    position: relative;
+width:75%;
 
-    
+
 
 
 }
