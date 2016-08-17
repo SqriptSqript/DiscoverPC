@@ -12,7 +12,7 @@
  body {
      width: 100%;
      height: 100%;
-   
+
 
 
  }
@@ -348,5 +348,4 @@ top:68px;
 @font-face {font-family: 'BebasNeue';src: url('webfonts/31E46B_0_0.eot');src: url('webfonts/31E46B_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/31E46B_0_0.woff2') format('woff2'),url('webfonts/31E46B_0_0.woff') format('woff'),url('webfonts/31E46B_0_0.ttf') format('truetype');}
 
 #top, #first, #second, #third, #footer{
-  overflow: hidden;
-}
+  overflow-x: hidden;}
