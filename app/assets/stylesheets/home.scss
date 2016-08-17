@@ -284,18 +284,12 @@ top:68px;
   width:185px;
   height:25%;
   background-color: #B71C1C;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
+
+  transition: .5s;
 }
 #chess{
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
+
+  transition: .5s;
   width: 160px;
   height:20%;
   top: 80px;;
@@ -333,7 +327,7 @@ font-size:500%;
   position:absolute;
   top: 10px;;
   left: 10px;
-  
+
   z-index:90000000000;
 
 }
