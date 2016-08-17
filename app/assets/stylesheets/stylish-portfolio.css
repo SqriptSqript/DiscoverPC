@@ -271,7 +271,7 @@ img{
     -o-transition: 1s;
     transition: 1s;
     top:8px;
- width:50%;
+    width: 1080px;;
 }
 
 
@@ -288,12 +288,3 @@ color:white;
 
 }
 
-#fillTwo{
-    height: 10px;
-
-}
-
-#fillOne{
-    height: 10px;
-
-}
