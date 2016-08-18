@@ -1,211 +1,224 @@
+<!--           
+
+               DiscoverPC version 1.0 
+                       Developed through the air.
+                Tyrese 8/18: There is a animation system already inside this app.
+                    check out: https://daneden.github.io/animate.css/ 
+                    Choose an animation and add it after you state the class 'animated'
+                    Ex: class="animated rubberBand"
+                    
+                    I cleaned the css so the page loads just a bit faster.
+                    There were double of mostly all our css rules. So the browser was loading the same css rule 2 TIMES!!
+                    The main styles for this page are located in:: home.scss
+                    
+                    
+                    What did I do and why?:
+                    
+                    Sections{
+                        Added a margin between the text and the top-border. Therefore the text won't be so close to the edge.
+                    }
+                    
+                    Inputs[ 
+                        Removed animations. 
+                        We didn't discuss what psychological influence we wanted this application to have on our users.
+                        The application is meant to have a playful / toyish interaction. 
+                        The animations were ok, but the grey coloring hover effects wasn't transferring that playful vibe.
+                                      
+                    ]
+                    Arrow buttons[
+                          ** I installed Hover.css http://ianlunn.github.io/Hover/#effects | and added a 'grow' hover effect to it.
+                    ]
+                    
+                    Footer[
+                        The social media links bobble/buzzes on hover.
+                        When clicked, it opens in a new tab rather than redirect on the same tab.
+                    ]
+                    
+    @@ I ADDED THE BACKGROUND PHOTO OF YOU BECAUSE I COULDNT FIND A BETTER ONE. THE BACKGROUND SHOULD MATCH THE OVERALL COLORS OF THE PAGE.
+                            WHEN YOU READ THIS, SKYPE ME AND WE'LL CHOOSE ONE. @@
+            -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<link href=' http://fonts.googleapis.com/css?family=Bebas+Neue' rel='stylesheet' type='text/css'>
-<link rel='stylesheet' type='text/css' href='assets/stylesheets/home.scss' >
-  <title>DiscoverPC</title>
-</head>
-<body><img id="tilt">
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center" id="bodyOne">
-            <h1 class="animated fadeInUp" id="headerNumberOne"> <b> Laptops Tailored for your Needs, In seconds </b>  </h1>
+    <head>
+        <title>DiscoverPC</title>
+    </head>
 
+    <body>
+        <!-- Header -->
+        <header id="top" class="header">
+        
+        <div class="text-vertical-center">
+            <h1 class="animated fadeInUp">DiscoverPC</h1>
+            <h3 style="color:white;">I'll guide you on the path to discovering the perfect computer.</h3>
             <br>
-            <a href="#first" class="btn btn-dark btn-lg animated pulse container" id="NICE">Let's go!</a>
+            <!-- bootstrap buttons: http://mdbootstrap.com/components/buttons/ -->
+            <a href="#first" class="btn btn-primary">Let's go!</a>
+        
         </div>
+        </header>
 
-    </header>
-    <!-- Header for questions -->
-    <%= simple_form_for :Computer , :url => shoot_subs_path, :method => 'GET' do |f|%>
-    <section id="first"  style=" background-color:#2196F3; position:absolute; top:100%; width:100%; height:75%; ">
- <div class="container">
-            <div class="row" style="color:white;"    >
-                <div class="col-lg-12 text-center">
-                    <h1 style="font-size:3em" class="animated swing"><b>First</b>. What will this computer be used for?</h1>
-                    <p class="lead">Movie editing, blogging, programming, what?</p>
-                         <div id="fillTwo" class="container" >
-                           <div  id="arrowDown1" >
-                          <a href="#second"><i class="fa fa-arrow-down fa-3x" style="color:white; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; " aria-hidden="true"></i></a>
+        <!-- Here's the Form -->
+        <%= simple_form_for :Computer , :url => shoot_subs_path, :method => 'GET' do |f|%>
+        <section id="first"  style=" background-color:#47b8e0; position:absolute; top:100%; width:100%; height:75%; ">
+            <link href=' http://fonts.googleapis.com/css?family=Bebas+Neue' rel='stylesheet' type='text/css'>
+             <div class="container">
+                        <!-- Tyrese 8/18: I added a margin here. Added some space between the text and the top of the div.
+                                     therefore the text is not invading the top-border's personal space. -->
+                        <div class="row" style="color:white; margin-top:5%;">
+                            <div class="col-lg-12 text-center">
+                                <h1 style="font-size:2.6em;" class="animated swing"><b>First</b>. What will this computer be used for?</h1>
+                                <p class="lead">Movie editing, blogging, programming, what?</p>
+                                     <div id="fillTwo" class="container" >
+                                        <div id="arrowDown2">
+                                            <a href="#second"><i class="fa fa-arrow-down fa-3x button hvr-grow" style="color:white" aria-hidden="true"></i></a>
+                                         </div>
+                                              <%= f.input :used_for, label: ' ', :collection => ["Programming", "Gaming" , "Media Editing" , "Blogging", "Study" , "Casual Usage"] %>
+                                    </div>
+                 
+                            <!-- /. div col-lg-12 text-center -->
                           </div>
-                          <%= f.input :used_for, label: ' '  , :input_html => { class: 'select' }, :collection => ["Programming", "Gaming" , "Media Editing" , "Blogging", "Study" , "Casual Usage"] %>
+                          <!-- /. div row -->
+                    </div>
+            <!-- /.container -->
 
-                           </div>
-
-
-                </div>
-                <br/>
-                <br/>
-                <!-- ./col-lg-12 text-center -->
-              </div>
-              <!-- ./row -->
-        </div>
-        <!-- /.container -->
-    <!-- Question: Used at-->
-    </section>
-    <section id="second" style="background-color:#0D47A1;  position:absolute; top:175%; width:100%; height:75%;" >
+        <!-- Question: Used at-->
+        </section>
+        <section id="second" style="background-color:#2b90d9; position:absolute; top:175%; width:100%; height:95%;" >
+            <div class="container" id="">
+                <div class="row" style="color:white; margin-top:5%;">
+                    <div class="col-lg-12 text-center"> </div>
+                        <h1 style="font-size:2.6em"><b>Second</b>. Where will you mostly be using the computer at?</h1>
+                        <p class="lead" >Home, work , on campus or the local coffee shop</p>
 
 
-        <div class="container" id="dasTest2">
-            <div class="row" style="color:white;">
-                <div class="col-lg-12 text-center" > </div>
-                    <h1 style="font-size:3em"><b>Second</b>. Where will you mostly be using the computer ?</h1>
-                    <p class="lead" >Home, work , on campus or the local coffee shop</p>
+                              <div id="fillOne" class="container">
+
+                              <div id="arrowDown2">
+                                <a href="#third"><i class="fa fa-arrow-down fa-3x button hvr-grow" style="color:white" aria-hidden="true"></i></a>
+                                 </div>
+
+                              <%= f.input :used_at, label: ' ',  :input_html => { class: '' }, :collection => [ 'Work', 'Home' , 'School', 'Travel']   %>
+
+                              </div>
 
 
-                          <div id="fillOne" class="container">
+                    </div>
+                    <!-- ./col-lg-12 text-center -->
+                  </div>
+                  <!-- ./row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- Question: Budget -->
+        <section id="third" style="background-color:#0080ff; position:absolute; top:250%; width:100%; height:75%; color:white; " >
+            <div class="container">
+                <div class="row" style="color:white; margin-top:5%;" >
+                    <div class="col-lg-12 text-center">
+                        <h1 style="font-size:3em"><b>Third. </b>Enter your budget.</h1>
+                        <p class="lead" >No need for punctuation !</p><div id="mack">
+                                <div class="row">
+                                       <!-- 'quest' class sets the styles for the placeholder. form-control sets the styles for input-text -->
+                                        <%= f.input :cash, label: ' ', :input_html => { class: 'quest' } , as: :integer , placeholder: '$0.50'%></div>
+                                </div>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                  <button type="submit" name="nil" class="btn btn-lg btn-dark" id="chess"><b>Discover! <b> </button>
+                                  <% end %>
+                              <br/>
 
-                          <div id="arrowDown2">
+                              </div>
+                    </div>
+                    <!-- ./col-lg-12 text-center -->
+                  </div>
+                  <!-- ./row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- Callout -->
 
+        <!-- Footer -->
+        <footer>
+            <div class="container" align="center" id="footer" >
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
 
-                            <a href="#third"><i class="fa fa-arrow-down fa-3x" style="color:white" aria-hidden="true"></i></a>
-                             </div>
+                        <br/>
+                        <br>
+                        <div class="text-vertical-center" style="background-image:url("discover.git\app\assets\images\bg.jpg");">
+                          <h4><strong>Meet the creators:</strong>
+                          </h4>
+                                                  <b> Sqript Team</b><br/>
+                          <a href="https://github.com/SqriptTeam" target="_blank"><i class="fa fa-github fa-3x button hvr-buzz" aria-hidden="true" style="color:#274c5e;"></i></a>
 
-                          <%= f.input :used_at, label: ' ',  :input_html => { class: 'quest' },:collection => [ 'Work', 'Home' , 'School', 'Travel']   %>
+                          <a href="https://twitter.com/SqriptTeam" target="_blank"><i class="fa fa-twitter fa-fw fa-3x button hvr-buzz" style="color:#274c5e;"></i></a>
 
-                          </div>
-
-
-                </div>
-                <!-- ./col-lg-12 text-center -->
-              </div>
-              <!-- ./row -->
-        </div>
-        <!-- /.container -->
-    </section>
-    <!-- Question: Budget -->
-    <section id="third" style="background-color:#1A237E; position:absolute; top:250%; width:100%; height:75%; color:white; " >
-        <div class="container">
-            <div class="row" style="color:white;" >
-                <div class="col-lg-12 text-center">
-                    <h1 style="font-size:3em"><b>Third. </b>Enter your budget.</h1>
-                    <p class="lead" >No need for punctuation !</p><div id="mack">
-                                    <%= f.input :cash, label: ' ', :input_html => { class: 'quest' } , as: :integer , placeholder: 'Price'%></div>
-                                    <br/>
-                                    <br/>
-                                    <br/>
-                              <button type="submit" name="nil" class="btn btn-lg btn-dark" id="chess"><b>Discover! <b> </button>
-                              <% end %>
-                          <br/>
-
-                          </div>
-                </div>
-                <!-- ./col-lg-12 text-center -->
-              </div>
-              <!-- ./row -->
-        </div>
-        <!-- /.container -->
-    </section>
-    <!-- Callout -->
-    <aside class="callout"  style="overflow:hidden;"  >
-        <div class="text-vertical-center" style="background-image:url("discover.git\app\assets\images\bg.jpg");"  >
-            <h1></h1>
-
-        </div>
-    </aside>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container" align="center" id="footer" >
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-
-                    <br/>
-                    <br>
-                    <div class="text-vertical-center" style="background-image:url("discover.git\app\assets\images\bg.jpg");">
-                      <h4><strong>Meet the creators:</strong>
-                      </h4>
-                                              <b> Sqript Team</b><br/>
-                      <a href="https://github.com/SqriptTeam"><i class="fa fa-github fa-3x animated rubberBand" aria-hidden="true" style="color:#274c5e;"></i></a>
-
-                      <a href="https://twitter.com/SqriptTeam"><i class="fa fa-twitter fa-fw fa-3x animated rubberBand" style="color:#274c5e;"></i></a>
-
-                            </div>
+                                </div>
 
 
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Sqript Team 2016</p>
+                        <hr class="small">
+                        <p class="text-muted">Copyright &copy; Sqript Team 2016</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
-<script src="https://use.fontawesome.com/07c4fb2a9f.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
+            <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+        </footer>
+    <script src="https://use.fontawesome.com/07c4fb2a9f.js"></script>
+        <!-- Custom Theme JavaScript -->
+        <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
                 }
             }
         });
-    });
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
-        }
-    });
-    // Disable Google Maps scrolling
-    // See http://stackoverflow.com/a/25904582/1607849
-    // Disable scroll zooming and bind back the click event
-    var onMapMouseleaveHandler = function(event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
-    }
-    var onMapClickHandler = function(event) {
-            var that = $(this);
-            // Disable the click handler until the user leaves the map area
-            that.off('click', onMapClickHandler);
-            // Enable scrolling zoom
-            that.find('iframe').css("pointer-events", "auto");
-            // Handle the mouse leave event
-            that.on('mouseleave', onMapMouseleaveHandler);
-        }
-        // Enable map zooming with mouse scroll when the user clicks the map
-    $('.map').on('click', onMapClickHandler);
-    </script>
+        </script>
 
 
 
-</body>
+    </body>
 </html>
